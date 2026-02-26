@@ -41,7 +41,7 @@ def load_cnn_model():
     try:
         model.load_state_dict(torch.load('cnn_blood_model.pth', map_location='cpu'))
     except:
-        st.sidebar.warning("Weights 'cnn_blood_model.pth' not found. Using untrained weights.")
+        st.sidebar.warning("")
     model.eval()
     return model
 
